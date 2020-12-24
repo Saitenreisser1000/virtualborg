@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3892753813926505205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.x
+      value: 46.17971
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.y
+      value: 38.58197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.x
+      value: 4.3955154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.z
+      value: 24.131966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.y
+      value: 24.027552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.z
+      value: 41.504208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592176, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: song
+      value: Blender Bots
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38.753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.46897146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5292124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46897146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5292124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 83.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.104541145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.10584062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.062046938
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592182, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Name
+      value: VideoPlane (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}

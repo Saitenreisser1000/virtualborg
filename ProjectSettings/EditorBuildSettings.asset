@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/StartMenu.unity
+    guid: 43e391c19d0ffd5469b04e4811f59f4d
+  - enabled: 1
+    path: Assets/Scenes/BORG building 25.unity
+    guid: 0a2196972f19e6d47989c47d055c0df7
+  m_configObjects: {}
