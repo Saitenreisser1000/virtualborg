@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &283309336933392826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.x
+      value: 45.84381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.y
+      value: 52.36623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.x
+      value: -0.21044394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.y
+      value: 30.919773
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Center.z
+      value: 13.757766
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592172, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Size.z
+      value: 20.75553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592176, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: song
+      value: Unterricht - Deutsch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592176, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: startFrame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46.306095
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0352
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -47.4149
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.28658408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2901465
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592177, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17009257
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496237546349592178, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dc62aab46bcc544ca99d1dfa0618331, type: 2}
+    - target: {fileID: 4496237546349592182, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}
+      propertyPath: m_Name
+      value: VideoPlane
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a9c495556b21e04188faeda0dbc6a63, type: 3}

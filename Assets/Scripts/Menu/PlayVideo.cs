@@ -2,81 +2,88 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class PlayVideo : MonoBehaviour
 {
-    public bool autostart = false;
-    private bool fullscreen = false;
-    public bool isFullscreenable = true;
     public string song;
-    public VideoPlayer videoPlayer;
-    public int startFrame;
-    private GameObject descriptionUI;
+    private bool isLoaded = false;
+    private bool fullscreen = false;
+    private VideoPlayer videoPlayer;
+    [SerializeField] private int startFrame;
+    public bool isPlayerIn;
+    private GameObject Scenemanager;
+    private GameObject UserInt;
 
-    // Start is called before the first frame update
     void Start()
     {
-        descriptionUI = GameObject.Find("Fullscreen");
         videoPlayer = gameObject.GetComponent<VideoPlayer>();
-        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, song + ".mp4");
-        videoPlayer.SetDirectAudioVolume(0, 0.05f);
-        videoPlayer.SetDirectAudioMute(0, true);
-        videoPlayer.Prepare();
-        /*videoPlayer.Play();
-        if (!autostart)
-        {
-            videoPlayer.frame = startFrame;
-            videoPlayer.Pause();
-        }*/
+        Scenemanager = GameObject.Find("_SceneManagement");
+        UserInt = GameObject.Find("_UI");
+        
     }
-
-    /*void StartVideoGesture()
-    {
-        videoPlayer.Play();
-        if (!autostart)
-        {
-            videoPlayer.frame = startFrame;
-            videoPlayer.Pause();
-        }
-    }*/
 
     private void Update()
     {
-        if(!fullscreen && videoPlayer.isPlaying && Input.GetKeyDown(KeyCode.K) && isFullscreenable)
+        if(!fullscreen && isPlayerIn && Input.GetKeyDown(KeyCode.V))
         {
-            fullscreen = true;
-            descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "beliebige Taste";
-            videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
-            videoPlayer.targetCamera = GameObject.Find("FirstPersonCharacter").GetComponent<Camera>();
+            SetFullScreenOnCamera(true); 
         }     
 
-        else if (fullscreen && (Input.anyKeyDown || Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") !=  0))
+        else if (fullscreen && (Input.anyKeyDown))// || Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") !=  0))
         {
-            descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "(K) Fullscreen";
-            videoPlayer.renderMode = VideoRenderMode.MaterialOverride;
-            fullscreen = false;
+            SetFullScreenOnCamera(false);
+        }
+    }
+
+    public void SetFullScreenOnCamera(bool toFull)
+    {
+        if (isPlayerIn)
+        {
+            if (toFull)
+            {
+                fullscreen = true;
+                videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+                videoPlayer.targetCamera = GameObject.Find("FirstPersonCharacter").GetComponent<Camera>();
+            }
+            else
+            {
+                fullscreen = false;
+                videoPlayer.renderMode = VideoRenderMode.MaterialOverride;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "(K) Fullscreen";
+        //descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "(K) Fullscreen";
         if(other.tag == "Player")
         {
-            videoPlayer.SetDirectAudioMute(0, false);
-            //StopAllCoroutines();
-            //videoPlayer.Play();
+            if (!isLoaded)
+            {
+                videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, song + ".mp4");
+                videoPlayer.SetDirectAudioVolume(0, 0.6f);
+                videoPlayer.Prepare();
+            }
+            UserInt.SendMessage("SetFullscreenActive", true);
+            Scenemanager.SendMessage("FadeOutMusic", 1);
+            isPlayerIn = true;
+            StopAllCoroutines();
+            videoPlayer.Play();
+            isLoaded = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "";
+        //descriptionUI.GetComponent<UnityEngine.UI.Text>().text = "";
         if (other.tag == "Player")
         {
-            videoPlayer.SetDirectAudioMute(0, true);
-            //videoPlayer.Pause();
-            //StartCoroutine(SetVideoBack());
+            UserInt.SendMessage("SetFullscreenActive", false);
+            Scenemanager.SendMessage("FadeInMusic", 8);
+            isPlayerIn = false;
+            videoPlayer.Pause();
+            StartCoroutine(SetVideoBack());
         }
     }
 
@@ -84,5 +91,10 @@ public class PlayVideo : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         videoPlayer.frame = startFrame;
+    }
+
+    public void SetVideoVolume(float vol)
+    {
+        //videoPlayer.SetDirectAudioVolume(0, vol);
     }
 }

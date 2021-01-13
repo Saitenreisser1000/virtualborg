@@ -1,40 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 
 public class PlayerSettings : MonoBehaviour
 {
     bool isEasy = false;
+    float walkSpeed;
+    float turnSpeed;
     Component fpsController;
     Component easyController;
+    public GameObject volumeSlider;
+    public GameObject drehenSlider;
+    public GameObject laufenSlider;
+
     // Start is called before the first frame update
     void Start()
     {
         fpsController = GetComponent("FirstPersonController");
-        easyController = GetComponent("PlayerMovement");    
+        easyController = GetComponent("PlayerMovement");
+        GetVolume();
     }
 
-    public void SetEasyControl(bool easy)
+    void GetVolume()
     {
-        /*if (easy) {
-            (fpsController as MonoBehaviour).enabled = false;
-            (easyController as MonoBehaviour).enabled = true;
-
-        }
-        else
-        {
-            (fpsController as MonoBehaviour).enabled = true;
-            (easyController as MonoBehaviour).enabled = false;
-        }*/
+        volumeSlider.GetComponent<Slider>().value = 0.5f;
     }
 
-    // Update is called once per frame
-    void Update()
+    void GetMovementSpeed(float speed)
     {
-        /*if (Input.GetKeyDown(KeyCode.O))
-        {
-            SetEasyControl(isEasy);
-            isEasy = !isEasy;
-        }*/
+        walkSpeed = speed;
+        laufenSlider.GetComponent<Slider>().value = speed;
+    }
+
+    void GetTurnSpeed(float speed)
+    {
+        turnSpeed = speed;
+        drehenSlider.GetComponent<Slider>().value = speed;
     }
 }

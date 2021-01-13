@@ -148,9 +148,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: -1526964690268444965, guid: 4d012a5e1d32ef54da66e477aa6ae748, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4d012a5e1d32ef54da66e477aa6ae748, type: 3}
       propertyPath: m_Name
-      value: STUDENT 01
+      value: STUDENT 01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 4d012a5e1d32ef54da66e477aa6ae748, type: 3}
       propertyPath: m_Controller

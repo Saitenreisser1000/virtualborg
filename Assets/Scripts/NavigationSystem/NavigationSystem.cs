@@ -5,15 +5,14 @@ using UnityEngine.AI;
 
 public class NavigationSystem : MonoBehaviour
 {
-    //private NavMeshAgent agent;
     private NavMeshPath path;
     private LineRenderer line;
     private GameObject target;
     private List<Vector3> point;
+
     // Start is called before the first frame update
     void Start()
     {
-        //agent = GetComponent<NavMeshAgent>();
         path = new NavMeshPath();
         line = GetComponent<LineRenderer>();
         if (target)
@@ -31,10 +30,7 @@ public class NavigationSystem : MonoBehaviour
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
         }
-        /*for (int i = 0; i < path.corners.Length - 1; i++)
-        {
-            Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
-        }*/
+      
     }
 
     void NavigationTarget(GameObject target)

@@ -5,28 +5,25 @@ using UnityEngine.UI;
 
 public class NavDropdown : MonoBehaviour
 {
-    Dropdown navDropdown;
+    public GameObject pauseMenu;
     GameObject player;
     GameObject target;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        navDropdown = GetComponent<Dropdown>();
-        navDropdown.onValueChanged.AddListener(delegate {
-            DropdownValueChanged(navDropdown);
-        });
     }
 
-    void DropdownValueChanged(Dropdown change)
+    public void FindRoom(string name)
     {
-        if(change.captionText.text == "Abbrechen")
+        if (name == "Abbrechen")
         {
             player.SendMessage("RemoveTarget");
             return;
         }
-        target = GameObject.Find("Nav" + change.captionText.text);
-        //print("changed" + change.captionText.text);
+        target = GameObject.Find(name);
         player.SendMessage("NavigationTarget", target);
+        pauseMenu.SendMessage("GameRun");
     }
 }

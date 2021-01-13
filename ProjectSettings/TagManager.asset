@@ -18,12 +18,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC
+  - Facility
+  - NearRender
+  - MidnearRender
+  - MidRender
+  - FarRender
   - 
   - 
   - 
